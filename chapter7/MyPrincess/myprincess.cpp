@@ -282,5 +282,38 @@ int main()
         }
     }
     //4.根据各项参数，判定游戏结果
+    int sum = 0;
+    for(int i = 0; i<5;i++)
+    {
+        sum += value_daughter_baseinfos[i];
+    }
+    if(sum >=2000)
+    {
+        cout << "最优游戏结果" << endl;
+    }
+    else if (sum>=1800 && sum < 2000)
+    {
+        cout << "次优游戏结果" << endl;
+    }
+    else if (sum >= 1200 && sum < 1600)
+    {
+        int max_value = value_daughter_baseinfos[0];
+        int max_index = 0;
+        for (int i = 1; i < 5; i++)
+        {
+            if(max_value<value_daughter_baseinfos[i])
+            {
+                max_value = value_daughter_baseinfos[i];
+                max_index = i;
+            }
+        }
+        if("道德" == value_baseinfo_names[max_index] && value_daughter_baseinfos[2] > value_daughter_baseinfos[4])
+        {
+            //高级祭祀  属性总数1200-1600，道德最高，且魅力>气质
+            cout << value_daughter_name << "成为高级祭祀" << endl;
+        }
+    }
+    
+
 
 }
