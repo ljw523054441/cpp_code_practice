@@ -7,7 +7,7 @@
 			"command": "C:\\mingw64\\bin\\g++.exe",
 			"args": [
 				"-g",
-				"${file}",
+				"${fileDirname}\\*.cpp",	//编译当前路径的cpp文件，若要只编译单个文件，则将此参数改为${file}即可
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe",
 				"-std=c++17"
