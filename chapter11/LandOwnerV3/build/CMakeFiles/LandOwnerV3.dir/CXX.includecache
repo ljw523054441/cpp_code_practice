@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/a.h
+
+H:/Code/cpp/cpp_code_practice/chapter11/LandOwnerV3/src/a.cpp
+a.h
+H:/Code/cpp/cpp_code_practice/chapter11/LandOwnerV3/src/a.h
+
+H:/Code/cpp/cpp_code_practice/chapter11/LandOwnerV3/src/main.cpp
+a.h
+H:/Code/cpp/cpp_code_practice/chapter11/LandOwnerV3/src/a.h
+iostream
+-
+

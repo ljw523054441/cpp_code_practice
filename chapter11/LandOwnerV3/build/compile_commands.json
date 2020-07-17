@@ -1,0 +1,12 @@
+[
+{
+  "directory": "H:/Code/cpp/cpp_code_practice/chapter11/LandOwnerV3/build",
+  "command": "g++   @CMakeFiles/LandOwnerV3.dir/includes_CXX.rsp -g -fexec-charset=GBK -g   -o CMakeFiles\\LandOwnerV3.dir\\src\\a.cpp.obj -c H:\\Code\\cpp\\cpp_code_practice\\chapter11\\LandOwnerV3\\src\\a.cpp",
+  "file": "H:/Code/cpp/cpp_code_practice/chapter11/LandOwnerV3/src/a.cpp"
+},
+{
+  "directory": "H:/Code/cpp/cpp_code_practice/chapter11/LandOwnerV3/build",
+  "command": "g++   @CMakeFiles/LandOwnerV3.dir/includes_CXX.rsp -g -fexec-charset=GBK -g   -o CMakeFiles\\LandOwnerV3.dir\\src\\main.cpp.obj -c H:\\Code\\cpp\\cpp_code_practice\\chapter11\\LandOwnerV3\\src\\main.cpp",
+  "file": "H:/Code/cpp/cpp_code_practice/chapter11/LandOwnerV3/src/main.cpp"
+}
+]
