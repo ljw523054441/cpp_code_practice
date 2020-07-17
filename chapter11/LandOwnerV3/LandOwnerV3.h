@@ -1,20 +1,23 @@
 #ifndef LANDOWNERV3_H
 #define LANDOWNERV3_H
+
+#include <iostream>
+using namespace std;
+
+//用来演示封装的基本概念
+
 class LandOwnerV3
 {
 public:
+	string name;
+	long score;
+	int cards[20];
 	LandOwnerV3();
 	~LandOwnerV3();
 
-private:
+	void ShowScore();
 
+//省略private
 };
 
-LandOwnerV3::LandOwnerV3()
-{
-}
-
-LandOwnerV3::~LandOwnerV3()
-{
-}
 #endif // !LANDOWNERV3_H

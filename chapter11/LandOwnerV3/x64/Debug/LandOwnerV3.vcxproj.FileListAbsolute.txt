@@ -1,0 +1,2 @@
+C:\Users\52305\Documents\code\cpp\cpp_code_practice\chapter11\LandOwnerV3\x64\Debug\LandOwnerV3.exe
+C:\Users\52305\Documents\code\cpp\cpp_code_practice\chapter11\LandOwnerV3\x64\Debug\LandOwnerV3.pdb
