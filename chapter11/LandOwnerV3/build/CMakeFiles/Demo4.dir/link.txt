@@ -1,3 +1,0 @@
-"D:\Microsoft Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E remove -f CMakeFiles\Demo4.dir/objects.a
-C:\mingw64\bin\ar.exe cr CMakeFiles\Demo4.dir/objects.a @CMakeFiles\Demo4.dir\objects1.rsp
-g++ -g -fexec-charset=GBK -g   -Wl,--whole-archive CMakeFiles\Demo4.dir/objects.a -Wl,--no-whole-archive  -o ..\bin\Demo4.exe -Wl,--out-implib,..\bin\libDemo4.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Demo4.dir\linklibs.rsp
