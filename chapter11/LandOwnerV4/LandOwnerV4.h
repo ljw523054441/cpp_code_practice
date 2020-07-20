@@ -3,6 +3,8 @@
 #include <iostream>
 #include <memory.h>
 
+//Get 与 Set方法 
+
 using namespace std;
 
 class LandOwnerV4
@@ -12,23 +14,19 @@ public:
     virtual ~LandOwnerV4();
 
     long Getscore(){return _score;}
-    void Setscore(long val)
+    void Setscore(long score)
     {
-        if(val < 0) _score = 0;
-                    _score = val;
+        if(score < 0) score = 0;
+                    _score = score;
     }
     string Getname(){ return _name;}
     void Setname(string name){ _name = name;}
-    //int Getcards[20] { return cards[20];}
-    //void Setcards[20](int val){cards[20] = val;}
+    
+private:
+    long _score;//一般私有的前面加下划线
+    string _name;
+    int _cards[20];
 };
 
-LandOwnerV4::LandOwnerV4(/* args */)
-{
-}
-
-LandOwnerV4::~LandOwnerV4()
-{
-}
 
 #endif LANDOWNERV4_H

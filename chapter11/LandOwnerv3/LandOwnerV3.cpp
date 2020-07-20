@@ -1,6 +1,5 @@
 #include "LandOwnerV3.h"
 
-using namespace std;
 
 LandOwnerV3::LandOwnerV3()
 {
