@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <iterator>
-#include <iterator>
+#include <algorithm>
 #include <cstdlib>
 #include <ctime>
 using namespace std;
@@ -11,7 +11,7 @@ using namespace std;
 /* 地主类 */
 class LandOwner
 {
-private:
+private://私有的属性和方法只能是在本类中使用，在main函数中无法调用
     string _nickname;
     string _sex;
     int _gold;
@@ -24,7 +24,10 @@ private:
     bool isContains(int);//剩余牌集合中是否包含cardNum这个牌面
     void deleteCard(vector<int>&,int);//从剩余牌集合中删除掉这张抽到的牌
 
-public:
+    string getColor(int);//获得牌的花色
+    string getValue(int);//获得牌面
+
+public://大家都可以使用
     LandOwner();
     LandOwner(string);
     LandOwner(string,string,int,long);

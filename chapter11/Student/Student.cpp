@@ -3,6 +3,7 @@
 Student::Student()
 {
     cout << "默认构造" << endl;
+    initScores();
 }
 
 Student::Student(string name,string desc)
@@ -12,6 +13,8 @@ Student::Student(string name,string desc)
     Setdesc(desc);
     //_desc = desc;
     cout << "调用带参构造：Student(string name,string desc)" << endl;
+
+    initScores();
 }
 
 //Student::Student(string name,string desc) : _name(name),_desc(desc)
@@ -21,7 +24,17 @@ Student::Student(int age)
 {
     _age = age;
     cout << "调用带参构造：Student(int age)" << endl;
+    initScores();
 }
+
+void Student::initScores()
+{
+    this->scores = new float[1];
+
+    this->scoreCount = 1;
+}
+
+
 
 void Student::ShowInfo()
 {
@@ -31,4 +44,5 @@ void Student::ShowInfo()
 Student::~Student()
 {
     cout << _name << "被释放" << endl;
+    delete this->scores;
 }

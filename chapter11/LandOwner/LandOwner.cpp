@@ -69,7 +69,7 @@ void LandOwner::ShowCards(const vector<int>& cards)//传递引用提高内存的
     for(auto iter = cards.begin();iter != cards.end();iter++)//const_iterator是不可修改的，而iterator是可修改的
     //vector<int>::const_iterator iter 是声明迭代器，iter实际上是一个指针
     {
-        cout << *iter << ",";
+        cout << getColor(*iter) << " " << getValue(*iter) << ",";
     }
     cout << endl;
 
@@ -103,8 +103,16 @@ void LandOwner::TouchCard(int cardCount)
         {
             currCards.push_back(packCards[randIndex]);//如果在，就将这张牌放入手牌
             //在剩余牌集合中删除这张牌
+            deleteCard(surplusCards,packCards[randIndex]);
+        }else
+        {
+            i--;//重新进行本次摸牌
         }
     }
+    cout << "<地主摸牌> - 当前手牌如下" <<endl;
+    ShowCards(currCards);
+    cout << "<地主摸牌后> - 剩余牌面如下" <<endl;
+    ShowCards(surplusCards);
     
 }
 
@@ -135,7 +143,7 @@ bool LandOwner::isContains(int cardNum)
 
 void LandOwner::deleteCard(vector<int>& cardVec, int card)
 {
-    //普通青年的做法
+    /* 普通青年的做法
     for (auto iter = cardVec.begin(); iter != cardVec.end();)
     {
         if(*iter == card)//如果找到就删除元素
@@ -143,11 +151,36 @@ void LandOwner::deleteCard(vector<int>& cardVec, int card)
             iter = cardVec.erase(iter);//这里的返回值指向已删除元素的下一个元素
         }else
         {
-            ++iter;//继续判断
+            ++iter;//继续判断下一个元素是否相同
         }
-        
+    } */
+    //使用算法删除
+    auto iter = find(cardVec.begin(),cardVec.end(),card);
+    if(iter != cardVec.end())
+    {
+        cardVec.erase(iter);
     }
     
+}
+
+string LandOwner::getColor(int card)//注意这里card不是下标，而是牌面
+{
+    if(card == 53) return "小王";
+    if(card == 54) return "大王";
+    string colors[] = {
+        "黑桃","红心","梅花","方片"
+    };
+    return colors[(card-1)/13];
+}
+
+string LandOwner::getValue(int card)
+{
+    if(card == 53) return "Black Joker";
+    if(card == 54) return "Red Joker";
+    string values[] = {
+        "A","2","3","4","5","6","7","8","9","10","J","Q","K"
+    };
+    return values[(card-1)%13];
 }
 
 LandOwner::~LandOwner()

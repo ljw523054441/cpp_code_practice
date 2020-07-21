@@ -13,6 +13,8 @@ int main()
     ptr_LandOwner2->ShowInfo();
     ptr_LandOwner3->ShowInfo();
 
+    ptr_LandOwner2->TouchCard(20);
+
     delete ptr_LandOwner1;
     delete ptr_LandOwner2;
     delete ptr_LandOwner3;
