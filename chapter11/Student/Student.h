@@ -27,8 +27,13 @@ public:
     string Getdesc(){return _desc;}
     void Setdesc(string desc){_desc = desc;}
 
-    void initScores();//初始化学生成绩数组，默认分配一个元素空间
+    void InitScores();//初始化学生成绩数组，默认分配一个元素空间
+    void AddScore(float);//向scores数组中添加一个分数
 
+    //书写函数：要求返回学霸对象
+    Student& GetSuperScholar(Student&);
+
+    float GetTotel();
 };
 
 #endif

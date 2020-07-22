@@ -19,4 +19,29 @@ int main()
     //这里其实就是在堆内存里新分配了一个空间，而这个指针是指向这个堆内存的
 
     stu5 -> ShowInfo();//指针变量里面的成员函数必须通过->来访问，相当于(*stu5).ShowInfo();
+
+    Student* ptrStu1 = new Student("迪热巴","微胖女孩");
+
+    ptrStu1->AddScore(78.9f);
+    ptrStu1->AddScore(78.9f);
+    ptrStu1->AddScore(78.9f);
+    ptrStu1->ShowInfo();
+
+    Student stu6("刘强东","不知妻美");
+    stu6.AddScore(45.2);
+    stu6.AddScore(45.2);
+    stu6.AddScore(45);
+    stu6.AddScore(45);
+    stu6.AddScore(45);
+    stu6.AddScore(45);
+    stu6.ShowInfo();
+
+    Student& Scholar1 = stu2.GetSuperScholar(*ptrStu1);
+    Student& Scholar2 = ptrStu1->GetSuperScholar(stu2);
+
+    cout << "学霸是：" << Scholar1.GetName() << endl;
+    cout << "学霸是：" << Scholar2.GetName() << endl;
+
+    delete ptrStu1;
+    delete stu5;
 }
