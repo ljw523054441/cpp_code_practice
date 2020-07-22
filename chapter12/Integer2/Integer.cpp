@@ -35,6 +35,32 @@ const Integer Integer::operator%(const Integer & other) const
     return Integer(this->m_value % other.m_value);
 }
 
+const Integer & Integer::operator=(const Integer & other)
+{
+    this->m_value = other.m_value;
+    return *this;//this是指向当前对象的指针，*this就是当前对象的值
+}
+
+//友元函数不需要使用域运算符
+const Integer operator+(int intValue,const Integer & other)
+{
+    return Integer(intValue + other.m_value);
+}
+
+//重载<<流运算符的实现
+ostream & operator<<(ostream & out,const Integer & num)
+{
+    out << num.m_value;
+    return out;
+}
+//重载>>流运算符的实现
+istream & operator>>(istream & in,Integer & num)
+{
+    cout << "请输入一个整数：" << endl;
+    in >> num.m_value;
+    return in;
+}
+
 Integer::~Integer()
 {
 }
