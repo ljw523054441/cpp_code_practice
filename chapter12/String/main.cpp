@@ -13,6 +13,12 @@ int main()
 
 void TestString()
 {
-    String str1("abc");
+    String str1("这里是中文");
+    String str2 = "abcdefg";
     cout << str1 << endl;
+    cout << str2 << endl;
+
+    str1 = str2;
+    cout << str1 << endl;
+    cout << str2 << endl;
 }

@@ -14,9 +14,13 @@ private:
 public:
     String();
     String(char *);
+    String(const String & str);//复制/拷贝构造,使得str这个对象跟新生成的对象，相互独立
     ~String();
     
     friend ostream & operator<<(ostream &, const String &);
+
+    //重载赋值运算符，将数组中的每个元素都进行复制，而不是只复制数组指针
+    const String & operator=(const String &);
 };
 
 #endif
